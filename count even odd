@@ -1,0 +1,20 @@
+// count even odd
+public class countevenodd {
+    public int countEVENODDS(int num1, int num2, int num3,int num4, int num5, String input6){
+        int[] nums={num1, num2, num3, num4, num5};
+        int count=0;
+        for(int num:nums){
+            if(input6.equals("even") && num%2==0){
+                count++;
+            }
+            if(input6.equals("odd") && num%2!=0){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        countevenodd obj=new countevenodd();
+        System.out.print(obj.countEVENODDS(14,15,17,6,10,"even"));
+    }
+}
