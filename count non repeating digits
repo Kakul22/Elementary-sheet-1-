@@ -1,0 +1,22 @@
+// count all the non repeating digits in a number 
+// ex: 995 output: 1 as 5 is only digit that is not repeating
+public class CountNonRepeatdigits {
+    public int CountNonRepeatDigits(int n){
+        int[] freq=new int[10];
+        while(n>0){
+            freq[n%10]++;
+            n=n/10;
+        }
+        int count=0;
+        for(int i=0;i<freq.length;i++){
+            if(freq[i]==1){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        CountNonRepeatdigits c = new CountNonRepeatdigits();
+        System.out.println(c.CountNonRepeatDigits(995));
+    }
+}
