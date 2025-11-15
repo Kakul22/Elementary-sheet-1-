@@ -1,0 +1,21 @@
+//COUNT UNIQUE DIGITS IN A NUMBER
+// EX: NUMBER= 995 output: 2 as unique digits are 9 and 5 
+public class countUniqueDIGITS {
+    public int CountUNIQUEDIGITS(int N) {
+        int count = 0;
+        int[] freq= new int[10];
+        while(N>0){
+            int r=N%10;
+            if(freq[r]==0){
+                freq[r]=1;
+                count++;
+            }
+            N=N/10;
+        }
+        return count;
+    }
+    public static void main(String[] args){
+        countUniqueDIGITS cun = new countUniqueDIGITS();
+        System.out.println(cun.CountUNIQUEDIGITS(995));
+    }
+}
