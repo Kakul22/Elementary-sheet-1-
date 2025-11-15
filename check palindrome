@@ -1,0 +1,27 @@
+// palindrome
+public class isPalindrome {
+    public int ISPalindrome(int n){
+        int org=n;
+        int res=0;
+        while(org!=0){
+            res=res*10+org%10;
+            org=org/10;
+
+        }
+        if(res==n){
+            return res;
+
+        }
+        else{
+            return 0;
+        }
+
+
+    }
+    public static void main(String[] args) {
+        isPalindrome p=new isPalindrome();
+        System.out.println(p.ISPalindrome(123));
+    }
+
+
+}
