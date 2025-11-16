@@ -1,0 +1,17 @@
+// return 2nd word of string in UPPERCASE
+public class return2NDwordinUPPERCASE {
+    public String Return2NDwordinUPPERCASE(String str){
+        if(str==null || str.length()==0 || str.trim().length()==0){
+            return "LESS THAN ZERO";
+        }
+        String [] words=str.trim().split(" ");
+        if(words.length<2){
+            return "LESS THAN ZERO";
+        }
+        return words[1].toUpperCase();
+    }
+    public static void main(String[] args) {
+        return2NDwordinUPPERCASE word=new return2NDwordinUPPERCASE();
+        System.out.println(word.Return2NDwordinUPPERCASE("Hello python"));
+    }
+}
