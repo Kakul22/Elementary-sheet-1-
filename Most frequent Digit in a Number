@@ -1,0 +1,28 @@
+//  most frequent digit in a number
+
+public class MostFrequentDigits {
+    public int mostFrequentDigits(int n) {
+        int[] freq = new int[10];
+        n=Math.abs(n);
+        freq[0] = 1;
+        if (n==0){
+            return 0;
+        }
+        while(n!=0){
+            freq[n%10]++;
+            n/=10;
+        }
+        int ans=0,maxfreq=-1;
+        for(int i=0;i<10;i++){
+            if(freq[i]>maxfreq){
+                maxfreq=freq[i];
+                ans=i;
+            }
+        }
+        return ans;
+    }
+    public static void main(String[] args) {
+        MostFrequentDigits mostFreqdig = new MostFrequentDigits();
+        System.out.println(mostFreqdig.mostFrequentDigits(15222));
+    }
+}
