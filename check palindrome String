@@ -1,0 +1,22 @@
+// check if string is palindrome or not (reverse of string = original string)
+// ex: abcba is palindrom while abcb is not 
+public class isPalindromeString {
+    public int isPalindrome(String str) {
+        if(str==null||str.length()==0){
+            return 0;
+        }
+
+        String rev= new StringBuilder(str).reverse().toString();                 
+        if(str.equals(rev)){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    public static void main(String[] args) {
+        isPalindromeString isPalindromeString=new isPalindromeString();
+        System.out.println(isPalindromeString.isPalindrome("abcbaa"));
+
+    }
+}
