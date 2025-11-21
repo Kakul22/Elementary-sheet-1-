@@ -1,0 +1,22 @@
+// Weight of Hill 
+// example : int row=5  int val=10 int increment=2
+//           10 + (12+12)+(14+14+14)+(16+16+16+16)+(18+18+18+18+18)  = 230 
+// example 2: int row=4  int val=2 int increment = 1  
+//            2+(3+3)+(4+4+4)+(5+5+5+5) = 40 
+
+public class WeightofHill {
+    public int WeightOFHILL(int row,int val,int incr){
+        int sum=0;
+        for(int i=0;i<row;i++){
+            for(int j=0;j<=i;j++){
+                sum+=val;
+            }
+            val+=incr;
+        }
+        return sum;
+    }
+    public static void main(String[] args){
+        WeightofHill w = new WeightofHill();
+        System.out.print(w.WeightOFHILL(5,10,2));
+    }
+}
