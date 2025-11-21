@@ -1,0 +1,21 @@
+// weight of the string 
+// example str: "abc"  a=1(1st position in alphabets) , b=2(position) c=3 output= 1+2+3=6
+// example 2: str="xyz"  x=24(position ) ,y=25,z=26       24+25+26=75
+
+public class WeightofString {
+    public int weightofString(String S) {
+       int sum=0;
+
+       for(char c:S.toCharArray()){
+           if(Character.isLetter(c)){
+               sum+=Character.toLowerCase(c)-'a'+1;
+
+           }
+       }
+       return sum;
+    }
+    public static void main(String[] args) {
+        WeightofString weightofString = new WeightofString();
+        System.out.println(weightofString.weightofString("abc"));
+    }
+}
