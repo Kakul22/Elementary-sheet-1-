@@ -1,0 +1,44 @@
+// Nth element in the series 
+//Form the series such that the gap between c and its next element (say d) should be the same as the gap between a and b. Similarly, the gap between c's next element (d) and d's next element (say e) should be the same as the gap between b and c.
+
+//Find and return the Nth element.
+
+//Example1- If the three numbers are a=1, b=3, c=6 and N=17 The series will be formed as below -
+
+//1, 3, 6, 8, 11, 13, 16, 18, 21, 23, 26, 28, 31, 33, 36, 38, 41 17th number in the series is 41
+
+//Example2- If the three numbers are a=5, b=-2, c=-4 and N=14 The series will be formed as below
+
+//5,-2,-4, -11, -13, -20, -22, -29, -31, -38, 40, -47, -49, -56 14th number in the series is -56
+
+
+public class NthElementELMENTARYSHEET4 {
+    public int NthElement(int a, int b, int c, int num) {
+        if(num==1){
+            return a;
+        }
+        if(num==2){
+            return b;
+        }
+        if(num==3){
+            return c;
+        }
+        int diff1=b-a;
+        int diff2=c-b;
+        int res=c;
+        for(int i=4;i<=num;i++){
+            if(i%2==0){
+                res+=diff1;
+            }
+            else{
+                res+=diff2;
+            }
+        }
+        return res;
+    }
+    public static void main(String[] args){
+        NthElementELMENTARYSHEET4 n=new NthElementELMENTARYSHEET4();
+        System.out.println(n.NthElement(1,3,6,17));
+
+    }
+}
