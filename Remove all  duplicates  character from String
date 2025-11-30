@@ -1,0 +1,17 @@
+public class removeDUPLICATEfromString {
+    public String removeDuplicates(String S) {
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0; i < S.length(); i++) {
+            char ch = S.charAt(i);
+            int idx=S.indexOf(ch,i+1);
+            if(idx==-1) {
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
+    }
+    public static void main(String[] args) {
+        removeDUPLICATEfromString s = new removeDUPLICATEfromString();
+        System.out.println(s.removeDuplicates("abscbasb"));
+    }
+}
